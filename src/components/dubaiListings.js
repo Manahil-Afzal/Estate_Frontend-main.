@@ -1,4 +1,3 @@
-// import dubaiListings from "../data/dubaiListings";
 const dubaiListings = [
   {
     id: 1,

@@ -24,7 +24,7 @@ export default function OAuth() {
           email: user.email,
           photo: user.photoURL,
         }),
-        credentials: "include", // ✅ important
+        credentials: "include", 
       });
 
       const data = await res.json();
@@ -43,7 +43,7 @@ export default function OAuth() {
     <button
       type="button"
       onClick={handleGoogle}
-      className="flex items-center justify-center gap-2 mt-3 border p-2 rounded-lg hover:bg-gray-100"
+      className="flex items-center justify-center gap-2 mt-3 border p-2 rounded-lg hover:bg-red-400"
     >
       <FcGoogle size={24} />
       Continue with Google

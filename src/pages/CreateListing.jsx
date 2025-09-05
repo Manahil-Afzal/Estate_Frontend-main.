@@ -9,7 +9,7 @@ import { API_BASE_URL } from "../config";
 export default function CreateListing() {
   const { currentUser } = useSelector((state) => state.user);
   const navigate = useNavigate();
-  const params = useParams(); // { listingId } if updating
+  const params = useParams(); 
   const [files, setFiles] = useState([]);
   const [formData, setFormData] = useState({
     imageUrls: [],
@@ -39,7 +39,6 @@ export default function CreateListing() {
         if (!res.ok) throw new Error('Failed to fetch listing');
         const listing = await res.json();
 
-        // Fill formData safely
         setFormData(prev => ({
           ...prev,
           ...listing,
