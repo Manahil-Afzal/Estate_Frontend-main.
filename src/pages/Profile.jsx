@@ -31,7 +31,7 @@ export default function Profile() {
   const [showListingsError, setShowListingsError] = useState(false);
   const [userListings, setUserListings] = useState([]);
   const dispatch = useDispatch();
-  const API_BASE_URL = "https://estate-backend.vercel.app/api";
+  const API_BASE_URL = "https://estate-backend-main.vercel.app/api";
   useEffect(() => {
     if (currentUser) {
       setFormData({

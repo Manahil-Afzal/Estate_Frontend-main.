@@ -29,7 +29,7 @@ export default function CreateListing() {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const API_BASE_URL = "https://estate-backend.vercel.app/api";
+  const API_BASE_URL = "https://estate-backend-main.vercel.app/api";
   useEffect(() => {
     if (!params.listingId) return;
 
