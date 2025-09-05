@@ -26,7 +26,7 @@ export default function SignUp() {
         password: formData.password,
       };
 
-      const res = await fetch(`${API_BASE_URL}/auth/register`,  {
+const res = await fetch(`${API_BASE_URL}/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

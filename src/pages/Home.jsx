@@ -19,11 +19,16 @@ export default function Home() {
 useEffect(() => {
   const fetchListings = async () => {
     try {
-    const res = await fetch(`${API_BASE_URL}/listing`); 
+      const res = await fetch(
+        "https://estate-backend-main.vercel.app/api/listing/get"
+      );
+      if (!res.ok) {
+        throw new Error(`Failed to fetch: ${res.status}`);
+      }
       const data = await res.json();
-      setApiListings(data);  
+      console.log(data);
     } catch (err) {
-      console.error('Failed to fetch listings:', err);
+      console.error("Failed to fetch listings:", err);
     }
   };
   fetchListings();
